@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test.Tests
+namespace ProgramTest.Tests
 {
-    public struct chartInfo
+    public struct ChartInfo
     {
         public int totalCase;//总测试用例数量
         public int successCase;//成功数量
@@ -17,7 +17,7 @@ namespace Test.Tests
     //所有测试类的基类
     public abstract class Test
     {
-        public chartInfo resultInfo;
+        public ChartInfo resultInfo;
 
         public abstract void StartTest();
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 
-namespace Test.Tests
+namespace ProgramTest.Tests
 {
 
     class Triangle3

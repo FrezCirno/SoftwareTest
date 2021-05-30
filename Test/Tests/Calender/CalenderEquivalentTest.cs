@@ -7,7 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 
 
-namespace Test.Tests
+namespace ProgramTest.Tests
 {
     class CalenderType2
     {
