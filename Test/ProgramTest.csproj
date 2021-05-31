@@ -6,12 +6,29 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{249B750C-D6F4-4E89-8D81-FAF6FE691876}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>ProgramTest</RootNamespace>
+    <AssemblyName>ProgramTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +75,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tests\Calender\CalenderV1.cs" />
+    <Compile Include="Tests\Calender\CalenderV2.cs" />
+    <Compile Include="Tests\Calender\ICalender.cs" />
+    <Compile Include="Tests\Commission\ICommission.cs" />
+    <Compile Include="Tests\ITester.cs" />
+    <Compile Include="Tests\PhoneSystem\IPhoneSystem.cs" />
+    <Compile Include="Tests\SaleSystem\ISaleSystem.cs" />
+    <Compile Include="Tests\Testable.cs" />
     <Compile Include="Tests\TestId.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -73,24 +98,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Calender\CalenderBoundaryTest.cs" />
-    <Compile Include="Tests\Calender\CalenderBoundaryTest_v2.cs" />
-    <Compile Include="Tests\Calender\CalenderEquivalentTest.cs" />
-    <Compile Include="Tests\Calender\CalenderEquivalentTest_v2.cs" />
-    <Compile Include="Tests\Comission\ComissionBoundaryTest.cs" />
-    <Compile Include="Tests\Comission\ComissionBoundaryTest_v2.cs" />
-    <Compile Include="Tests\PhoneSystem\PhoneSystem.cs" />
-    <Compile Include="Tests\PhoneSystem\PhoneSystemBranchTest.cs" />
-    <Compile Include="Tests\SaleSystem\SaleSystemBranchTest.cs" />
-    <Compile Include="Tests\SaleSystem\SaleSystemDicisionConditionTest.cs" />
-    <Compile Include="Tests\SaleSystem\SaleSystemMultipleConditionTest.cs" />
-    <Compile Include="Tests\SaleSystem\SaleSystemSimpleConditionTest.cs" />
-    <Compile Include="Tests\SaleSystem\SaleSystemStatementTest.cs" />
-    <Compile Include="Tests\Test.cs" />
-    <Compile Include="Tests\Triangle\TriangleBoundaryTest_v2.cs" />
-    <Compile Include="Tests\Triangle\TriangleEquivalentTest.cs" />
-    <Compile Include="Tests\Triangle\TriangleBoundaryTest.cs" />
-    <Compile Include="Tests\Triangle\TriangleEquivalentTest_v2.cs" />
+    <Compile Include="Tests\Commission\CommissionV1.cs" />
+    <Compile Include="Tests\Commission\CommissionV2.cs" />
+    <Compile Include="Tests\PhoneSystem\PhoneSystemV1.cs" />
+    <Compile Include="Tests\SaleSystem\SaleSystemV1.cs" />
+    <Compile Include="Tests\Tester.cs" />
+    <Compile Include="Tests\Triangle\ITriangle.cs" />
+    <Compile Include="Tests\Triangle\TriangleV2.cs" />
+    <Compile Include="Tests\Triangle\TriangleV1.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,45 +122,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="mydata\.DS_Store" />
-    <None Include="mydata\Calender\Calender_Boundary_Expected_Result.json" />
-    <None Include="mydata\Calender\Calender_Boundary_Result.json" />
-    <None Include="mydata\Calender\Calender_Boundary_Result2.json" />
-    <None Include="mydata\Calender\Calender_Boundary_Testcase.json" />
-    <None Include="mydata\Calender\Calender_Equivalent_Expected_Result.json" />
-    <None Include="mydata\Calender\Calender_Equivalent_Result.json" />
-    <None Include="mydata\Calender\Calender_Equivalent_Result2.json" />
-    <None Include="mydata\Calender\Calender_Equivalent_Testcase.json" />
-    <None Include="mydata\Comission\Comission_Boundary_Expected_Result.json" />
-    <None Include="mydata\Comission\Comission_Boundary_Result.json" />
-    <None Include="mydata\Comission\Comission_Boundary_Testcase.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Branch_Expected_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Branch_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Branch_Testcase.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_DicisionCondition_Expected_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_DicisionCondition_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_DicisionCondition_Testcase.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_MultipleCondition_Expected_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_MultipleCondition_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_MultipleCondition_Testcase.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_SimpleCondition_Expected_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_SimpleCondition_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_SimpleCondition_Testcase.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Statement_Expected_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Statement_Result.json" />
-    <None Include="mydata\SaleSystem\SaleSystem_Statement_Testcase.json" />
-    <None Include="mydata\Triangle\.DS_Store" />
-    <None Include="mydata\Triangle\Triangle_Boundary_Expected_Result.json" />
-    <None Include="mydata\Triangle\Triangle_Boundary_Result.json" />
-    <None Include="mydata\Triangle\Triangle_Boundary_Result_v2.json" />
-    <None Include="mydata\Triangle\Triangle_Boundary_Testcase.json" />
-    <None Include="mydata\Triangle\Triangle_Equivalent_Expected_Result.json" />
-    <None Include="mydata\Triangle\Triangle_Equivalent_Result.json" />
-    <None Include="mydata\Triangle\Triangle_Equivalent_Result_v2.json" />
-    <None Include="mydata\Triangle\Triangle_Equivalent_Testcase.json" />
-    <None Include="mydata\Triangle\三角形测试用例.md" />
-    <None Include="mydata\测试模板.xlsx" />
-    <None Include="mydata\测试用例.xls" />
+    <None Include="Data\Calender_Boundary_Expected_Result.json" />
+    <None Include="Data\Calender_Boundary_Testcase.json" />
+    <None Include="Data\Calender_Equivalent_Expected_Result.json" />
+    <None Include="Data\Calender_Equivalent_Testcase.json" />
+    <None Include="Data\Commission_Boundary_Expected_Result.json" />
+    <None Include="Data\Commission_Boundary_Testcase.json" />
+    <None Include="Data\SaleSystem_Branch_Expected_Result.json" />
+    <None Include="Data\SaleSystem_Branch_Testcase.json" />
+    <None Include="Data\SaleSystem_MultipleCondition_Expected_Result.json" />
+    <None Include="Data\SaleSystem_MultipleCondition_Testcase.json" />
+    <None Include="Data\SaleSystem_SimpleCondition_Expected_Result.json" />
+    <None Include="Data\SaleSystem_SimpleCondition_Testcase.json" />
+    <None Include="Data\SaleSystem_Statement_Expected_Result.json" />
+    <None Include="Data\SaleSystem_Statement_Testcase.json" />
+    <None Include="Data\Triangle_Boundary_Expected_Result.json" />
+    <None Include="Data\Triangle_Boundary_Testcase.json" />
+    <None Include="Data\Triangle_Equivalent_Expected_Result.json" />
+    <None Include="Data\Triangle_Equivalent_Testcase.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,8 +155,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="mydata\PhoneSystem\" />
-    <Folder Include="Resources\" />
+    <Content Include="Data\PhoneSystem_Branch_Expected_Result.json" />
+    <Content Include="Data\PhoneSystem_Branch_Testcase.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
