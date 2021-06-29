@@ -365,3 +365,6 @@ FodyWeavers.xsd
 bin/
 obj/
 .DS_Store
+*_Result.json
+*_Result_v2.json
+!*_Expected_Result.json
