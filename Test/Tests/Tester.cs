@@ -11,7 +11,7 @@ namespace ProgramTest.Tests
         private readonly string _testFilePath;
         private readonly string _expectFilePath;
         private readonly string _resultFilePath;
-        private static readonly string baseUrl = "../../Data";
+        private static readonly string baseUrl = "Data";
         public TestCaseInfo TestCaseInfo { get; private set; }
         public TestResultInfo TestResultInfo { get; private set; }
 
