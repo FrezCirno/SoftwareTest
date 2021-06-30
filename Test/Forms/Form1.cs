@@ -50,7 +50,7 @@ namespace ProgramTest.Forms
             _testTable[new TestId(TestName.佣金问题, "v2", TestMethod.边界值)] =
                 new Tester<ICommission, CommissionType, double>(new CommissionV2(), "Commission_Boundary_Testcase.json",
                     "Commission_Boundary_Expected_Result.json", "Commission_Boundary_Result_v2.json");
-            _testTable[new TestId(TestName.销售问题, "v1", TestMethod.路径测试)] =
+            /*_testTable[new TestId(TestName.销售问题, "v1", TestMethod.路径测试)] =
                 new Tester<ISaleSystem, SaleSystemType, double>(new SaleSystemV1(),
                     "SaleSystem_Statement_Testcase.json", "SaleSystem_Statement_Expected_Result.json",
                     "SaleSystem_Statement_Result.json");
@@ -68,7 +68,7 @@ namespace ProgramTest.Forms
             _testTable[new TestId(TestName.销售问题, "v1", TestMethod.复杂条件测试)] =
                 new Tester<ISaleSystem, SaleSystemType, double>(new SaleSystemV1(),
                     "SaleSystem_MultipleCondition_Testcase.json", "SaleSystem_MultipleCondition_Expected_Result.json",
-                    "SaleSystem_MultipleCondition_Result.json");
+                    "SaleSystem_MultipleCondition_Result.json");*/
             _testTable[new TestId(TestName.电话系统, "v1", TestMethod.边界值)] =
                 new Tester<IPhoneSystem, PhoneSystemType, string>(new PhoneSystemV1(),
                     "PhoneSystem_Boundary_Testcase.json", "PhoneSystem_Boundary_Expected_Result.json",
