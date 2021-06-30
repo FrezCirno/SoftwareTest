@@ -2,8 +2,8 @@
 {
     public struct PhoneSystemType
     {
-        public double Time { get; set; }
-        public int NTimeout { get; set; }
+        public double MonthTalkTime { get; set; }
+        public int YearUnpaidNum { get; set; }
     }
 
     public abstract class IPhoneSystem : ITestable<PhoneSystemType, string>

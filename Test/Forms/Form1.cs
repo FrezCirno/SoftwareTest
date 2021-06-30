@@ -69,10 +69,18 @@ namespace ProgramTest.Forms
                 new Tester<ISaleSystem, SaleSystemType, double>(new SaleSystemV1(),
                     "SaleSystem_MultipleCondition_Testcase.json", "SaleSystem_MultipleCondition_Expected_Result.json",
                     "SaleSystem_MultipleCondition_Result.json");
-            _testTable[new TestId(TestName.电话系统, "v1", TestMethod.综合测试)] =
+            _testTable[new TestId(TestName.电话系统, "v1", TestMethod.边界值)] =
                 new Tester<IPhoneSystem, PhoneSystemType, string>(new PhoneSystemV1(),
-                    "PhoneSystem_Branch_Testcase.json", "PhoneSystem_Branch_Expected_Result.json",
-                    "PhoneSystem_Branch_Result.json");
+                    "PhoneSystem_Boundary_Testcase.json", "PhoneSystem_Boundary_Expected_Result.json",
+                    "PhoneSystem_Boundary_Result.json");
+            _testTable[new TestId(TestName.电话系统, "v1", TestMethod.等价类)] =
+                new Tester<IPhoneSystem, PhoneSystemType, string>(new PhoneSystemV1(),
+                    "PhoneSystem_Equivalent_Testcase.json", "PhoneSystem_Equivalent_Expected_Result.json",
+                    "PhoneSystem_Equivalent_Result.json");
+            _testTable[new TestId(TestName.电话系统, "v1", TestMethod.决策表)] =
+                new Tester<IPhoneSystem, PhoneSystemType, string>(new PhoneSystemV1(),
+                    "PhoneSystem_Decision_Testcase.json", "PhoneSystem_Decision_Expected_Result.json",
+                    "PhoneSystem_Decision_Result.json");
             _testTable[new TestId(TestName.万年历, "v1", TestMethod.边界值)] = new Tester<ICalender, CalenderType, string>(
                 new CalenderV1(), "Calender_Boundary_Testcase.json", "Calender_Boundary_Expected_Result.json",
                 "Calender_Boundary_Result.json");
